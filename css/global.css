@@ -1,0 +1,35 @@
+:root{
+  --offcanvas-width: 270px;
+  --navbar-height: 56px;
+}
+
+.sidebar-nav{
+  width: var(--offcanvas-width) !important;
+}
+
+.sidebar-navbar > li > a:hover,.sidebar-navbar > li > a.active{
+  background-color: #414141;
+  color: var(--bs-white) !important;
+}
+
+@media only screen and (max-width: 991px){
+  .navbar-collapse{
+    margin-top: 1rem;
+  }
+}
+
+@media only screen and (min-width: 992px){
+  .sidebar-nav{
+    transform: none !important;
+    -webkit-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -o-transform: none !important;
+    visibility: visible !important;
+    top: 68px !important
+  }
+
+  main{
+    margin-left: var(--offcanvas-width);
+  }
+}
