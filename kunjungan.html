@@ -19,7 +19,7 @@
       <button class="navbar-toggler visible" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasExample">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand fw-bold" href="#">Admin  Dashboard</a>
+      <a class="navbar-brand fw-bold" href="#">GYM Dashboard</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -71,7 +71,7 @@
               <span class="me-2">
                 <i class="bi bi-card-checklist"></i>
               </span>
-              <span>Kunjungan</span>
+              <span>Kunjungan Latihan</span>
             </a>
           </li>
         </ul>
@@ -90,11 +90,195 @@
         </div>
       </div>
       
-      <!-- KONTEN DISINI -->
+      <div class="row">
+        <div class="col-xl-4">
+          <div class="mb-3">
+            <label for="tanggalKunjunganInput" class="form-label">Pilih Tanggal</label>
+            <input type="date" class="form-control" id="tanggalKunjunganInput" aria-describedby="tanggalKunjunganHelp" min="2024-01-01">
+            <div id="tanggalKunjunganHelp" class="form-text">Tanggal kunjungan latihan GYM.</div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <span>Kunjungan tanggal <span id="tanggalKunjunganText" class="fw-bold">05 Desember 2024</span></span>
+            </div>
+            <div class="card-body">
+              <span>Total Kunjungan : 5 Orang</span>
+              <button type="button" class="btn btn-primary d-block mt-2" data-bs-toggle="modal" data-bs-target="#aturKunjunganModal">Atur Kunjungan</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-8">
+          <div class="table-responsive">
+            <table class="table table-striped pelanggan-table mt-3">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>                              
+                  <th scope="col">Nama Lengkap</th>
+                  <th scope="col">Tanggal/Waktu Kunjungan</th>
+                  <th scope="col">Aksi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Max Verstappen</td>
+                  <td>01 Januari 2000, 15:00 WITA</td> 
+                  <td>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#batalkanKunjunganModal">Batalkan</button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Christian Rondonuwu</td>
+                  <td>01 Januari 2000, 16:30 WITA</td>
+                  <td>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#batalkanKunjunganModal">Batalkan</button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Cristiano Ronaldo</td>
+                  <td>01 Januari 2000, 17:20 WITA</td>
+                  <td>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#batalkanKunjunganModal">Batalkan</button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td>Shergio Wuisan</td>
+                  <td>01 Januari 2000, 18:00 WITA</td>
+                  <td>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#batalkanKunjunganModal">Batalkan</button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">5</th>
+                  <td>Thania Nelwan</td>
+                  <td>01 Januari 2000, 18:25 WITA</td>
+                  <td>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#batalkanKunjunganModal">Batalkan</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
 
     </div>
   </main>
   <!-- MAIN END -->
+
+  <!-- MODAL START -->
+
+  <div class="modal fade" id="aturKunjunganModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">
+            Atur Kunjungan Latihan <span id="aturKunjunganModalTanggal" class="fw-bold"></span>
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-4">
+              <input class="form-control me-2 mb-2" type="search" placeholder="Cari pelanggan..." aria-label="Search">
+            </div>
+          </div>
+          <div class="row">
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nama Lengkap</th>
+                    <th scope="col">Aksi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Max Verstappen</td>
+                    <td>
+                      <button type="button" class="btn btn-danger">Batalkan</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Cristiano Ronaldo</td>
+                    <td>
+                      <button type="button" class="btn btn-danger">Batalkan</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Christian Rondonuwu</td>
+                    <td>
+                      <button type="button" class="btn btn-danger">Batalkan</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>Shergio Wuisan</td>
+                    <td>
+                      <button type="button" class="btn btn-danger">Batalkan</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>Thania Nelwan</td>
+                    <td>
+                      <button type="button" class="btn btn-danger">Batalkan</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>Patasani Nuru</td>
+                    <td>
+                      <button type="button" class="btn btn-success">Berkunjung</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td>Hamim Royani</td>
+                    <td>
+                      <button type="button" class="btn btn-success">Berkunjung</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Tutup</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="batalkanKunjunganModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Batalkan Kunjungan</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <span>Konfirmasi pembatalan kunjungan pelanggan ini?</span>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Jangan</button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Batalkan</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- MODAL END -->
+  
+  <script src="./js/kunjungan.js"></script>
 
   <!-- BOOTSRAP 5 JS  -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>

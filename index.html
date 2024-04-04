@@ -20,7 +20,7 @@
       <button class="navbar-toggler visible" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasExample">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand fw-bold" href="#">Admin  Dashboard</a>
+      <a class="navbar-brand fw-bold" href="#">GYM Dashboard</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -72,7 +72,7 @@
               <span class="me-2">
                 <i class="bi bi-card-checklist"></i>
               </span>
-              <span>Kunjungan</span>
+              <span>Kunjungan Latihan</span>
             </a>
           </li>
         </ul>
@@ -90,13 +90,14 @@
           <div style="border-bottom: 1px solid rgb(177, 177, 177);" class="mb-3"></div>
         </div>
       </div>
+
       <div class="row dashboard-card-section">
         <div class="col-md-4">
           <div class="card text-white bg-primary mb-3 border-0">
             <div class="card-body d-flex align-items-center justify-content-between flex-wrap-reverse">
               <div>
                 <h5 class="card-title text-uppercase fs-6">TOTAL PELANGGAN</h5>
-                <h3 class="card-text fw-bold">150 Orang</h3>
+                <h3 class="card-text fw-bold">7 Orang</h3>
               </div>
               <span><i class="bi bi-people-fill fs-1"></i></span>
             </div>
@@ -107,7 +108,7 @@
             <div class="card-body d-flex align-items-center justify-content-between flex-wrap-reverse">
               <div>
                 <h5 class="card-title text-uppercase fs-6">PELANGGAN AKTIF</h5>
-                <h3 class="card-text fw-bold">50 Orang</h3>
+                <h3 class="card-text fw-bold">6 Orang</h3>
               </div>
               <span><i class="bi bi-person-fill-check fs-1"></i></span>
             </div>
@@ -118,16 +119,176 @@
             <div class="card-body d-flex align-items-center justify-content-between flex-wrap-reverse">
               <div>
                 <h5 class="card-title text-uppercase fs-6">PELANGGAN EXPIRE</h5>
-                <h3 class="card-text fw-bold">10 Orang</h3>
+                <h3 class="card-text fw-bold">1 Orang</h3>
               </div>
               <span><i class="bi bi-person-fill-dash fs-1"></i></span>
             </div>
           </div>
         </div>
       </div>
+
+      <div class="row mt-4 gap-5">
+        <div class="col-md-6 d-flex flex-column">
+
+          <nav aria-label="List pelanggan pagination" class="align-self-end">
+            <ul class="pagination mb-0">
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>                              
+                  <th scope="col">Nama Lengkap</th>
+                  <th scope="col">Sisa Masa Langganan</th>
+                  <th scope="col">Aksi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Max Verstappen</td>
+                  <td class="text-danger fw-bold">Expire</td>
+                  <td>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#perpanjangLanggananModal">Perpanjang</button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Cristiano Ronaldo</td>
+                  <td class="text-danger">3 Hari</td>
+                  <td>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#perpanjangLanggananModal">Perpanjang</button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Christian Rondonuwu</td>
+                  <td class="text-warning">7 Hari</td>
+                  <td>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#perpanjangLanggananModal">Perpanjang</button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td>Shergio Wuisan</td>
+                  <td>25 Hari</td>
+                  <td>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#perpanjangLanggananModal">Perpanjang</button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">5</th>
+                  <td>Thania Nelwan</td>
+                  <td>30 Hari</td>
+                  <td>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#perpanjangLanggananModal">Perpanjang</button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">6</th>
+                  <td>Patasani Nuru</td>
+                  <td>30 Hari</td>
+                  <td>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#perpanjangLanggananModal">Perpanjang</button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">7</th>
+                  <td>Hamim Royani</td>
+                  <td>30 Hari</td>
+                  <td>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#perpanjangLanggananModal">Perpanjang</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <nav aria-label="List pelanggan pagination" class="align-self-end mt-2">
+            <ul class="pagination">
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+        </div>
+
+        <div class="col-md-5">
+
+          <!-- CHART UNTUK VISUALISASI DATA -->
+
+        </div>
+      </div>
     </div>
   </main>
   <!-- MAIN END -->
+
+  <!-- MODAL START -->
+  <div class="modal fade" id="perpanjangLanggananModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Perpanjang Masa Langganan (<span class="fw-bold">Nama Lengkap</span>)</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <span class="form-label">Masa perpanjangan</span>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="masaPerpanjangRadioInput" id="exampleRadios1" value="1 Bulan" checked>
+              <label class="form-check-label" for="exampleRadios1">
+                1 Bulan
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="masaPerpanjangRadioInput" id="exampleRadios2" value="3 Bulan">
+              <label class="form-check-label" for="exampleRadios2">
+                3 Bulan
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="masaPerpanjangRadioInput" id="exampleRadios3" value="6 Bulan">
+              <label class="form-check-label" for="exampleRadios3">
+                6 Bulan
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="masaPerpanjangRadioInput" id="exampleRadios4" value="12 Bulan">
+              <label class="form-check-label" for="exampleRadios4">
+                12 Bulan
+              </label>
+            </div>
+          </div>
+          <span>Dari tanggal 04 April 2024</span>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Batal</button>
+          <button type="button" class="btn btn-success" data-bs-dismiss="modal">Perpanjang</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- MODAL END -->
 
   <!-- BOOTSRAP 5 JS  -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>

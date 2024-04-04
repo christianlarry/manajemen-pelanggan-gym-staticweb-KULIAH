@@ -20,7 +20,7 @@
       <button class="navbar-toggler visible" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasExample">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand fw-bold" href="#">Admin  Dashboard</a>
+      <a class="navbar-brand fw-bold" href="#">GYM Dashboard</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -72,7 +72,7 @@
               <span class="me-2">
                 <i class="bi bi-card-checklist"></i>
               </span>
-              <span>Kunjungan</span>
+              <span>Kunjungan Latihan</span>
             </a>
           </li>
         </ul>
@@ -101,69 +101,147 @@
 
       <div class="row">
         <div class="col-md-12">
-          <table class="table pelanggan-table">
-            <thead>
-              <tr>
-                <th scope="col">#</th>                              
-                <th scope="col">Nama Lengkap</th>
-                <th scope="col">Email</th>
-                <th scope="col">Nomor Tlpn</th>
-                <th scope="col">Alamat</th>
-                <th scope="col">Sisa Masa Langganan</th>
-                <th scope="col">Aksi</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Max Verstappen</td>
-                <td>max@gmail.com</td>
-                <td>08134456789</td>
-                <td>Tomohon</td>
-                <td class="text-danger fw-bold">Expire</td>
-                <td>
-                  <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editPelangganModal">Edit</button>
-                  <button type="button" class="btn btn-danger">Hapus</button>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Cristiano Ronaldo</td>
-                <td>cristiano@gmail.com</td>
-                <td>08134456789</td>
-                <td>Mapanget</td>
-                <td class="text-danger">3 Hari</td>
-                <td>
-                  <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editPelangganModal">Edit</button>
-                  <button type="button" class="btn btn-danger">Hapus</button>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Christian Rondonuwu</td>
-                <td>christian@gmail.com</td>
-                <td>08134456789</td>
-                <td>Malalayang 2</td>
-                <td class="text-warning">7 Hari</td>
-                <td>
-                  <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editPelangganModal">Edit</button>
-                  <button type="button" class="btn btn-danger">Hapus</button>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">4</th>
-                <td>Shergio Wuisan</td>
-                <td>shergio@gmail.com</td>
-                <td>08134456789</td>
-                <td>Leilem</td>
-                <td>25 Hari</td>
-                <td>
-                  <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editPelangganModal">Edit</button>
-                  <button type="button" class="btn btn-danger">Hapus</button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <nav aria-label="Daftar Pelanggan Pagination">
+            <ul class="pagination justify-content-center">
+              <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="table-responsive">
+            <table class="table table-striped pelanggan-table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>                              
+                  <th scope="col">Nama Lengkap</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Nomor Tlpn</th>
+                  <th scope="col">Alamat</th>
+                  <th scope="col">Sisa Masa Langganan</th>
+                  <th scope="col">Aksi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Max Verstappen</td>
+                  <td>max@gmail.com</td>
+                  <td>08134456789</td>
+                  <td>Tomohon</td>
+                  <td class="text-danger fw-bold">Expire</td>
+                  <td>
+                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editPelangganModal">Edit</button>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#hapusPelangganConfirmModal">Hapus</button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Cristiano Ronaldo</td>
+                  <td>cristiano@gmail.com</td>
+                  <td>08134456789</td>
+                  <td>Mapanget</td>
+                  <td class="text-danger">3 Hari</td>
+                  <td>
+                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editPelangganModal">Edit</button>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#hapusPelangganConfirmModal">Hapus</button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Christian Rondonuwu</td>
+                  <td>christian@gmail.com</td>
+                  <td>08134456789</td>
+                  <td>Malalayang 2</td>
+                  <td class="text-warning">7 Hari</td>
+                  <td>
+                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editPelangganModal">Edit</button>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#hapusPelangganConfirmModal">Hapus</button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td>Shergio Wuisan</td>
+                  <td>shergio@gmail.com</td>
+                  <td>08134456789</td>
+                  <td>Leilem</td>
+                  <td>25 Hari</td>
+                  <td>
+                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editPelangganModal">Edit</button>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#hapusPelangganConfirmModal">Hapus</button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">5</th>
+                  <td>Thania Nelwan</td>
+                  <td>thania@gmail.com</td>
+                  <td>08134456789</td>
+                  <td>Manado</td>
+                  <td>30 Hari</td>
+                  <td>
+                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editPelangganModal">Edit</button>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#hapusPelangganConfirmModal">Hapus</button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">6</th>
+                  <td>Patasani Nuru</td>
+                  <td>patasani@gmail.com</td>
+                  <td>08134456789</td>
+                  <td>Manado</td>
+                  <td>30 Hari</td>
+                  <td>
+                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editPelangganModal">Edit</button>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#hapusPelangganConfirmModal">Hapus</button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">7</th>
+                  <td>Hamim Royani</td>
+                  <td>hamim@gmail.com</td>
+                  <td>08134456789</td>
+                  <td>Manado</td>
+                  <td>30 Hari</td>
+                  <td>
+                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editPelangganModal">Edit</button>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#hapusPelangganConfirmModal">Hapus</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <nav aria-label="Daftar Pelanggan Pagination">
+            <ul class="pagination justify-content-center">
+              <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
 
@@ -174,7 +252,7 @@
   <!-- MODAL START-->
 
   <div class="modal fade" id="tambahPelangganModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="staticBackdropLabel">Tambah Pelanggan</h5>
@@ -220,7 +298,7 @@
   </div>
 
   <div class="modal fade" id="editPelangganModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="staticBackdropLabel">Edit Pelanggan</h5>
@@ -260,6 +338,24 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-warning" onclick="document.getElementById('editPelangganForm').reset()">Reset</button>
           <button type="button" class="btn btn-success">Edit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="hapusPelangganConfirmModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Hapus Pelanggan</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <span>Yakin untuk menghapus pelanggan?</span>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Batal</button>
+          <button type="button" class="btn btn-danger">Hapus</button>
         </div>
       </div>
     </div>
