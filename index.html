@@ -25,7 +25,7 @@
   </div>
 
   <!-- NAVBAR START -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <nav class="header-nav navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container-fluid px-4 py-1">
       <!-- <button class="navbar-toggler visible" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar"
         aria-controls="offcanvasExample">
@@ -44,14 +44,34 @@
                 <i class="bi bi-bell-fill fs-5"></i>
               </button>
             </a>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <ul class="dropdown-menu dropdown-menu-end p-0 info-dropdown-menu mt-3" aria-labelledby="navbarDropdown">
               <li>
-                <h4 class="dropdown-item user-select-none">Admin Shergio</h4>
+                <h6 class="dropdown-header bg-primary text-white py-3">
+                  Notifikasi
+                </h6>
               </li>
-              <li><a class="dropdown-item text-danger" href="#">Keluar</a></li>
-              <!-- <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+              <li>
+                <a class="dropdown-item py-2 border-bottom" href="#">
+                  <div class="d-flex flex-column gap-1">
+                    <span class="fw-500 text-wrap" style="font-size: 15px;">Pelanggan expire, Max Verstappen</span>
+                    <span class="text-gray" style="font-size: 13px;">07 April 2024</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item py-2 border-bottom" href="#">
+                  <div class="d-flex flex-column gap-1">
+                    <span class="fw-500 text-wrap" style="font-size: 15px;">Pelanggan baru, Patasani Nuru</span>
+                    <span class="text-gray" style="font-size: 13px;">06 April 2024</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="dropdown-item py-3 d-flex justify-content-end text-uppercase text-primary" style="font-weight: 600; font-size: 15px;">
+                  Lihat Semua
+                  &raquo;
+                </a>
+              </li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -61,11 +81,16 @@
                 <i class="bi bi-person-fill"></i>
               </button>
             </a>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <ul class="dropdown-menu dropdown-menu-end info-dropdown-menu mt-3" aria-labelledby="navbarDropdown" style="width: fit-content;">
               <li>
-                <h4 class="dropdown-item user-select-none">Admin Shergio</h4>
+                <h4 class="dropdown-item user-select-none fw-500 font-monospace text-uppercase fs-5">Admin Shergio</h4>
               </li>
-              <li><a class="dropdown-item text-danger" href="#">Keluar</a></li>
+              <li>
+                <a class="dropdown-item text-danger" href="#">
+                <i class="bi bi-box-arrow-right me-2"></i>
+                Keluar
+                </a>
+              </li>
               <!-- <li><a class="dropdown-item" href="#">Another action</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#">Something else here</a></li> -->
@@ -81,28 +106,30 @@
     <!-- SIDEBAR START -->
     <aside class="bg-white sidebar-nav d-flex flex-column justify-content-between">
       <nav class="navbar-light py-5 d-flex flex-column flex-fill border-end border-gray">
-        <div class="sidenav-heading">
-          Pengguna
+        <div id="sidenavPenggunaSection" class="d-flex flex-column">
+          <div class="sidenav-heading">
+            Pengguna
+          </div>
+          <!-- <a href="#" class="sidenav-link">
+            <span class="me-3">
+              <i class="bi bi-person-fill"></i>
+            </span>
+            <span>Profil</span>
+          </a> -->
+          <a href="#" class="sidenav-link">
+            <span class="me-3">
+              <i class="bi bi-bell-fill"></i>
+            </span>
+            <span>Notifikasi</span>
+          </a>
+          <a href="#" class="sidenav-link text-danger">
+            <span class="me-3">
+              <i class="bi bi-box-arrow-right"></i>
+            </span>
+            <span>Keluar</span>
+          </a>
+          <div class="sidenav-divider"></div>
         </div>
-        <a href="#" class="sidenav-link">
-          <span class="me-3">
-            <i class="bi bi-person-fill"></i>
-          </span>
-          <span>Profil</span>
-        </a>
-        <a href="#" class="sidenav-link">
-          <span class="me-3">
-            <i class="bi bi-bell-fill"></i>
-          </span>
-          <span>Notifikasi</span>
-        </a>
-        <a href="#" class="sidenav-link text-danger">
-          <span class="me-3">
-            <i class="bi bi-box-arrow-right"></i>
-          </span>
-          <span>Keluar</span>
-        </a>
-        <div class="sidenav-divider"></div>
         <div class="sidenav-heading">
           Administrator
         </div>

@@ -1,7 +1,7 @@
 const navbar = document.querySelector(".navbar")
 const sidebarMainWrapper = document.querySelector(".sidebar-main-wrapper")
 const loadingScreen = document.getElementById("loadingScreen")
-const sidebarNav = document.querySelector(".sidebar-nav")
+// const sidebarNav = document.querySelector(".sidebar-nav")
 const main = document.querySelector("main")
 const sidebarNavButton = document.querySelector('button[data-toggle="sidebarNav"]')
 
@@ -31,7 +31,6 @@ window.addEventListener("DOMContentLoaded",()=>{
 
   // SIDEBAR NAV TOGGLE EVENT
   sidebarNavButton.addEventListener("click",()=>{
-    sidebarNav.classList.toggle("sidebar-collapse")
-    main.classList.toggle("sidebar-collapse")
+    document.body.classList.toggle("sidebar-collapse")
   })
 })
